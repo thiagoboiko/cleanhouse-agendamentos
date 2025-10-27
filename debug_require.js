@@ -1,0 +1,13 @@
+const path = require('path');
+const resolved = require.resolve('./src/controllers/AgendamentoController');
+console.log('resolved path:', resolved);
+const ctrl = require('./src/controllers/AgendamentoController');
+console.log('exports keys:', Object.keys(ctrl));
+console.log('listarAgendamentos type:', typeof ctrl.listarAgendamentos);
+console.log('buscarAgendamento type:', typeof ctrl.buscarAgendamento);
+console.log('criarAgendamento type:', typeof ctrl.criarAgendamento);
+console.log('controller object:', ctrl);
+console.log('require.cache entry keys:', Object.keys(require.cache[resolved] ? require.cache[resolved] : {}));
+const fs = require('fs');
+const content = fs.readFileSync(resolved, 'utf8');
+console.log('\n--- file preview (first 400 chars) ---\n', content.slice(0,400));
