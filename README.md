@@ -6,14 +6,18 @@
 ## 📦 Links dos Artefatos
 
 ### GitHub
-- **Repositório:** https://github.com/SEU-USUARIO/cleanhouse-agendamentos
+- **Repositório:** https://github.com/thiago-boiko/cleanhouse-agendamentos
 
 ### Docker Hub
-- **Imagem:** https://hub.docker.com/r/SEU-DOCKER-ID/cleanhouse-agendamentos
+- **Imagem:** https://hub.docker.com/r/thiagoboiko/cleanhouse-agendamentos
 
 ## 🐳 Como Executar com Docker
 
 ### Comando para rodar:
+
+**Imagem disponível em:**
+```bash
+docker pull thiagoboiko/cleanhouse-agendamentos:latest
 
 docker run -d -p 3001:3001 --name cleanhouse-agendamentos -e MONGODB_URI="mongodb+srv://thiagoboiko:123@agendamentoscleanhouse.2aequjw.mongodb.net/test?retryWrites=true&w=majority&appName=AgendamentosCLEANHOUSE" thiagoboiko/cleanhouse-agendamentos:1.0.0
 
